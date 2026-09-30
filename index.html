@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+  index.html — Manda Burguer
+  CSS em style.css · lógica em script.js · cardápio em produtos.js
+  Carregue produtos.js ANTES de script.js.
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manda Burger — Hambúrguer artesanal na chapa</title>
+  <meta name="description" content="Manda Burger: hambúrgueres artesanais, entradas, pizzas dobradas e macarronadas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Permanent+Marker&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header role="banner">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo logo-slot" aria-label="Manda Burguer — Início">
+        <img class="logo-image" src="img/logo.png" alt="" />
+        <span class="logo-fallback">Manda<span>Burguer</span></span>
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação mobile" aria-hidden="true">
+      <a href="#inicio">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag">Hambúrguer artesanal na chapa</p>
+          <h1 class="hero-title" id="hero-title">Manda<br>Burguer</h1>
+          <p class="hero-subtitle">Manda ver na fome.</p>
+          <p class="hero-body">Blend de verdade, pão macio e molho da casa. Conheça nosso cardápio e descubra as combinações preparadas na chapa.</p>
+          <div class="hero-actions">
+            <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
+          </div>
+        </div>
+        <div class="hero-visual logo-slot" aria-hidden="true">
+          <img class="logo-image" src="img/logo.png" alt="" />
+          <span class="hero-logo-fallback">Manda<br />Burguer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" aria-labelledby="cardapio-title">
+      <div class="container">
+        <h2 class="section-title" id="cardapio-title">O cardápio</h2>
+        <p class="section-subtitle">Hambúrgueres, entradas, pizzas dobradas e macarronadas.</p>
+
+        <div class="categories-grid" id="chips" role="group" aria-label="Filtrar por categoria"></div>
+
+        <div class="busca-wrapper" role="search">
+          <span aria-hidden="true">🔍</span>
+          <input type="search" id="busca-input" class="busca-input" placeholder="Buscar item… ex: bacon, batata, frango" autocomplete="off" aria-label="Pesquisar no cardápio" />
+          <button class="busca-limpar" id="busca-limpar" aria-label="Limpar pesquisa" hidden>✕</button>
+        </div>
+
+        <div id="lista-produtos" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- MAIS PEDIDOS -->
+    <section id="destaques" aria-labelledby="destaques-title">
+      <div class="container">
+        <h2 class="section-title" id="destaques-title">Os mais pedidos</h2>
+        <p class="section-subtitle">Os favoritos da galera. Começa por aqui se for a primeira vez.</p>
+        <div class="grid" id="ofertas-grid"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" aria-labelledby="sobre-title">
+      <div class="container sobre-inner">
+        <div class="sobre-text">
+          <h2 class="section-title" id="sobre-title">Nossa história</h2>
+          <p>A Manda Burguer nasceu da vontade de fazer um hambúrguer sem frescura: carne moída na casa, pão macio, ingrediente fresco e molho que ninguém copia. Cada pedido é montado na hora, do jeito que você gosta.</p>
+          <p>Aqui o cliente manda no sabor. Escolheu, a gente manda pra chapa.</p>
+        </div>
+        <div class="sobre-visual" aria-hidden="true">
+          <p>Manda<br>ver!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 class="section-title" id="contato-title">Onde a gente está</h2>
+        <div class="info-cards">
+          <div class="info-card"><span aria-hidden="true">📍</span><div><p class="info-label">Endereço</p><p>Tv. Tales Neto - João de Deus, São Luís - MA</p></div></div>
+          <div class="info-card"><span aria-hidden="true">🕐</span><div><p class="info-label">Horário</p><p>Ter a Dom: 18h às 23h<br>Segunda: fechado</p></div></div>
+          <div class="info-card"><span aria-hidden="true">📸</span><div><p class="info-label">Instagram</p><p>@mandaburgerslz</p></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-inner">
+      <a href="#inicio" class="logo logo-slot" aria-label="Manda Burguer">
+        <img class="logo-image" src="img/logo.png" alt="" />
+        <span class="logo-fallback">Manda<span>Burguer</span></span>
+      </a>
+      <nav class="social-links" aria-label="Redes sociais">
+        <a class="social-link" href="https://api.whatsapp.com/send?phone=559886061442&amp;text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido!" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="social-link" href="https://www.instagram.com/mandaburgerslz/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <p>© 2026 Manda Burguer. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="produtos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
