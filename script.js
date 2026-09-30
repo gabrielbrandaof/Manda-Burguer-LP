@@ -52,7 +52,7 @@ function renderCardapio() {
     if (catAtiva !== 'todos' && catAtiva !== c) return;
     const itens = cat.itens.filter((p) => !t || normaliza(`${p.nome} ${p.descricao} ${cat.nome}`).includes(t));
     if (!itens.length) return;
-    html += `<h3 class="cat-titulo">${cat.emoji} ${cat.nome}</h3><div class="grid">${itens.map(cardProduto).join('')}</div>`;
+    html += `<h3 class="cat-titulo">${cat.emoji} ${cat.nome}<a class="cat-voltar" href="#cardapio" aria-label="Voltar ao início dos produtos" title="Voltar ao início dos produtos"><img src="img/seta.png" alt=""></a></h3><div class="grid">${itens.map(cardProduto).join('')}</div>`;
   });
   $('#lista-produtos').innerHTML =
     html || '<p class="vazio-busca">Nada com esse nome. Tente outra palavra, como "bacon" ou "batata".</p>';
