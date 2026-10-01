@@ -36,9 +36,6 @@ ol { list-style: none; }
 section {
   padding: 84px 0;
   background-color: var(--preto);
-  background-image:
-    repeating-linear-gradient(0deg, transparent 0 46px, rgba(255,255,255,.055) 46px 48px),
-    repeating-linear-gradient(90deg, transparent 0 94px, rgba(255,255,255,.04) 94px 96px);
 }
 
 .skip-link { position: absolute; left: -999px; top: 8px; background: var(--laranja); color: var(--preto); padding: 8px 14px; z-index: 200; }
@@ -239,9 +236,25 @@ footer { border-top: 4px solid var(--laranja); background: var(--laranja); paddi
   --texto-suave: rgba(0,0,0,.78);
   color: var(--preto);
   background-color: var(--laranja);
-  background-image:
-    repeating-linear-gradient(0deg, transparent 0 46px, rgba(0,0,0,.14) 46px 48px),
-    repeating-linear-gradient(90deg, transparent 0 94px, rgba(0,0,0,.10) 94px 96px);
+}
+#cardapio .section-subtitle {
+  font-family: 'Sedgwick Ave', cursive;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+#sobre #sobre-title {
+  font-family: 'Sedgwick Ave', cursive;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  text-shadow: none;
+}
+#sobre .sobre-text > p {
+  font-family: 'Sedgwick Ave', cursive;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 #cardapio .cat-titulo { color: var(--preto); text-shadow: 2px 2px 0 var(--giz); }
 #cardapio .vazio-busca { color: var(--texto-suave); }
